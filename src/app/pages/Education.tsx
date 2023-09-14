@@ -22,7 +22,7 @@ const Education = () => {
 
   return (
     <>
-      <div ref={ref} id="Education" className="w-full h-fit flex justify-center items-center my-20">
+      <div ref={ref} id="Education" className="w-full h-fit flex justify-center items-center my-5 lg:my-20">
         <div className="w-3/4 h-full flex flex-col justify-center items-center gap-0 lg:gap-10">
           <motion.h1
             initial={{ opacity: 0 }}
@@ -65,6 +65,9 @@ const Education = () => {
                     </p>
                     <p className="font-medium text-white text-sm lg:text-base">
                       {education.address}
+                    </p>
+                    <p className="font-medium text-white text-sm lg:text-base">
+                      - {education.description}
                     </p>
                   </div>
                 </div>

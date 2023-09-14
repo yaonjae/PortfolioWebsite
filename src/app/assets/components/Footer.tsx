@@ -6,8 +6,8 @@ const Footer = () => {
       <small>&copy; 2023 Jae. All rights reserved.</small>
       <p>
         <span className="font-bold">About this website:</span> built with React & Next.js (App Router
-        & Server Actions), TypeScript , Tailwind CSS, Framer Motion, React Email
-        & Resend, Vercel Hosting.
+        & Server Actions), TypeScript , Tailwind CSS, Framer Motion, and React Email
+        & Resend.
       </p>
     </footer>
   );
