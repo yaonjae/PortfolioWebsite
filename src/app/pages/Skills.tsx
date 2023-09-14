@@ -34,7 +34,7 @@ const Skills = () => {
           >
             <span>My Skills</span>
           </motion.h1>
-          <div className="w-full flex flex-col lg:flex-row gap-10">
+          <div className="w-full flex flex-col lg:flex-row gap-0 lg:gap-10">
             <div className="w-full">
               <motion.h1
                 initial={{ opacity: 0 }}
