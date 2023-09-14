@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scroll-smooth font-sans w-[1500px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800 via-gray-900 to-black bg-fixed"
+      className="scroll-smooth font-sans bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800 via-gray-900 to-black bg-fixed"
     >
       <body className={inter.className}>
         <ActivePageContextProvider>

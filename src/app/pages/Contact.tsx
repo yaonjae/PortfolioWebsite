@@ -25,8 +25,8 @@ const Contact = () => {
 
   return (
     <>
-      <div ref={ref} id="Contact" className="w-full h-screen">
-        <div className="mx-56 h-full flex justify-center items-center gap-7">
+      <div ref={ref} id="Contact" className="w-full h-fit my-10 flex justify-center items-center">
+        <div className="w-3/4 h-full flex flex-col-reverse lg:flex-row justify-center items-center gap-7">
           <motion.div
             initial={{ opacity: 0, scale: 1 }}
             animate={animateMail}
@@ -50,7 +50,7 @@ const Contact = () => {
                 required
                 maxLength={200}
                 placeholder="Enter Email"
-                className="w-full h-10 p-4 outline-none bg-transparent border-blue-500 border-2 rounded-md text-white"
+                className="w-full h-10 p-4 outline-none bg-transparent border-blue-500 border-2 rounded-md text-white text-sm lg:text-base"
               />
               <textarea
                 name="senderMessage"
@@ -60,7 +60,7 @@ const Contact = () => {
                 required
                 maxLength={5000}
                 placeholder="Enter Message"
-                className="p-4 outline-none bg-transparent border-blue-500 border-2 rounded-md text-white"
+                className="p-4 outline-none bg-transparent border-blue-500 border-2 rounded-md text-white text-sm lg:text-base"
               ></textarea>
               <SubmitBtn />
             </form>
@@ -71,14 +71,14 @@ const Contact = () => {
             transition={{ delay: 0.5 }}
             className="w-full h-full flex flex-col justify-center items-start"
           >
-            <h1 className="font-bold text-4xl">
+            <h1 className="w-full font-bold text-3xl xl:text-4xl text-center lg:text-start">
               <span>I'd love to hear from you.</span>
             </h1>
-            <p className="text-xl text-white">
+            <p className="w-full text-lg xl:text-xl text-white text-center lg:text-start">
               Leave a message, and I'll get back to you as soon as possible.
             </p>
-            <div className="flex flex-col gap-10 mt-10">
-              <div className="w-full flex items-center gap-4">
+            <div className="w-full flex flex-col items-center lg:items-start gap-0 lg:gap-10 mt-4 lg:mt-10">
+              <div className="w-fit flex items-center gap-4 scale-90 lg:scale-100">
                 <svg
                   className="h-8 w-8 text-blue-500"
                   viewBox="0 0 24 24"
@@ -101,7 +101,7 @@ const Contact = () => {
                   </a>
                 </p>
               </div>
-              <div className="w-full flex items-center gap-4">
+              <div className="w-fit flex items-center gap-4 scale-90 lg:scale-100">
                 <svg
                   className="h-8 w-8 text-blue-500"
                   width="24"
@@ -119,7 +119,7 @@ const Contact = () => {
                 </svg>
                 <p className="text-white text-sm font-bold">{userMobileNumber}</p>
               </div>
-              <div className="w-full flex items-center gap-4">
+              <div className="w-fit flex items-center gap-4 scale-90 lg:scale-100">
                 <svg
                   className="h-8 w-8 text-blue-500"
                   fill="none"

@@ -25,21 +25,21 @@ const Skills = () => {
 
   return (
     <>
-      <div ref={ref} id="Skills" className="w-full h-screen">
-        <div className="mx-56 h-full flex flex-col justify-center">
+      <div ref={ref} id="Skills" className="w-full h-fit flex justify-center items-center">
+        <div className="w-3/4 h-full flex flex-col justify-center px-4 lg:px-0">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={animateH1}
-            className="text-center mb-10 text-5xl font-bold"
+            className="text-center mb-10 text-3xl md:text-4xl lg:text-5xl font-bold"
           >
             <span>My Skills</span>
           </motion.h1>
-          <div className="w-full flex gap-10">
+          <div className="w-full flex flex-col lg:flex-row gap-10">
             <div className="w-full">
               <motion.h1
                 initial={{ opacity: 0 }}
                 animate={animateH1}
-                className="w-full text-center font-bold py-1 px-2 mb-4 uppercase rounded-full drop-shadow-lg text-white bg-blue-700 bg-opacity-70"
+                className="w-full text-center text-sm lg:text-base font-bold py-1 px-2 mb-4 uppercase rounded-full drop-shadow-lg text-white bg-blue-700 bg-opacity-70"
               >
                 Front-end
               </motion.h1>
@@ -54,15 +54,15 @@ const Skills = () => {
                     className="mb-10"
                   >
                     <div className="flex justify-between items-center">
-                      <h1 className="font-bold text-white text-xl drop-shadow-lg">
+                      <h1 className="font-bold text-white text-lg lg:text-xl drop-shadow-lg">
                         {skill.name}
                       </h1>
-                      <h2 className="font-bold text-blue-500 text-lg drop-shadow-lg">
+                      <h2 className="font-bold text-blue-500 text-base lg:text-lg drop-shadow-lg">
                         {skill.proficiency}%
                       </h2>
                     </div>
                     <div className="relative pt-1">
-                      <div className="overflow-hidden h-2 mb-4 text-xs flex rounded-full drop-shadow-lg bg-neutral-600">
+                      <div className="overflow-hidden h-1 lg:h-2 mb-4 text-xs flex rounded-full drop-shadow-lg bg-neutral-600">
                         <motion.div
                           initial={{ opacity: 0, x: -100 }}
                           animate={animateProficiency}
@@ -79,7 +79,7 @@ const Skills = () => {
               <motion.h1
                 initial={{ opacity: 0 }}
                 animate={animateH1}
-                className="w-full text-center font-bold py-1 px-2 mb-4 uppercase rounded-full drop-shadow-lg text-white bg-blue-700 bg-opacity-70"
+                className="w-full text-center text-sm lg:text-base font-bold py-1 px-2 mb-4 uppercase rounded-full drop-shadow-lg text-white bg-blue-700 bg-opacity-70"
               >
                 Back-end
               </motion.h1>
@@ -94,15 +94,15 @@ const Skills = () => {
                     className="mb-10"
                   >
                     <div className="flex justify-between items-center">
-                      <h1 className="font-bold text-white text-xl drop-shadow-lg">
+                      <h1 className="font-bold text-white text-lg lg:text-xl drop-shadow-lg">
                         {skill.name}
                       </h1>
-                      <h2 className="font-bold text-blue-500 text-lg drop-shadow-lg">
+                      <h2 className="font-bold text-blue-500 text-base lg:text-lg drop-shadow-lg">
                         {skill.proficiency}%
                       </h2>
                     </div>
                     <div className="relative pt-1">
-                      <div className="overflow-hidden h-2 mb-4 text-xs flex rounded-full drop-shadow-lg bg-neutral-600">
+                      <div className="overflow-hidden h-1 lg:h-2 mb-4 text-xs flex rounded-full drop-shadow-lg bg-neutral-600">
                         <motion.div
                           initial={{ opacity: 0, x: -100 }}
                           animate={animateProficiency}

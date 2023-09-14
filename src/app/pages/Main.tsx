@@ -31,14 +31,18 @@ const Main = () => {
 
   return (
     <>
-      <div ref={ref} id="Index" className="mx-auto w-full h-screen">
-        <div className="mx-52 h-full flex justify-center gap-0 flex-row">
+      <div
+        ref={ref}
+        id="Index"
+        className="w-full h-screen flex justify-center items-center"
+      >
+        <div className="w-3/4 h-full flex justify-center gap-2 lg:gap-0 flex-col lg:flex-row">
           <motion.div
             initial={{ opacity: 0, scale: 0.3 }}
             animate={animateImage}
             className="w-full flex items-center justify-center"
           >
-            <div className="w-80 h-80 border-cyan-500 relative top-8 border-b-4 border-r-4 rounded-xl">
+            <div className="w-80 h-80 border-cyan-500 relative top-8 border-b-4 border-r-4 rounded-xl hidden lg:block scale-75 xl:scale-100">
               <div className="w-80 h-80 border-cyan-500 relative -left-14 -top-14 border-t-4 border-l-4 rounded-xl">
                 <div className="w-80 h-96 bg-transparent relative left-5 -top-10 overflow-hidden border-blue-500 border-b-8">
                   <div className="w-80 h-80 bg-transparent absolute top-16 left-0 flex justify-center items-center border-blue-500 border-8 group">
@@ -50,29 +54,35 @@ const Main = () => {
                 </div>
               </div>
             </div>
+            <div className="w-64 h-64 border-8 border-cyan-600 rounded-full drop-shadow-lg overflow-hidden group block lg:hidden scale-75 md:scale-100">
+              <img
+                className="group-hover:scale-110 transition-all duration-200"
+                src={profilePic.src}
+              />
+            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={animateName}
             transition={{ delay: 0.5 }}
-            className="w-full flex flex-col gap-4 justify-center items-center"
+            className="w-full flex flex-col gap-1 lg:gap-4 justify-center items-center"
           >
-            <h2 className="font-semibold text-white text-2xl drop-shadow-md">
+            <h2 className="font-semibold text-white text-xl lg:text-2xl drop-shadow-md">
               Hi there, I'm Jae Yaon
             </h2>
-            <h1 className="font-extrabold text-white text-4xl">
+            <h1 className="font-extrabold text-center text-white text-2xl lg:text-3xl xl:text-4xl">
               I am into <span>{text}</span>
               <span>
                 <Cursor cursorStyle="|" />
               </span>
             </h1>
-            <h2 className="text-white text-xl drop-shadow-md text-center">
+            <h2 className="text-white text-base lg:text-xl drop-shadow-md text-center">
               Passionate about web development, fueled by a love for
               programming.
             </h2>
             <div className="follow-list">
-              <ol className="flex gap-4">
-                <li className="p-3 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 group hover:scale-110 active:scale-105 transition-all">
+              <ol className="flex gap-1 lg:gap-4">
+                <li className="p-3 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 group hover:scale-110 active:scale-105 transition-all scale-75 lg:scale-100">
                   <a
                     href="https://www.facebook.com/profile.php?id=100004264547024&mibextid=ZbWKwL"
                     target="_blank"
@@ -91,7 +101,7 @@ const Main = () => {
                     </svg>
                   </a>
                 </li>
-                <li className="p-3 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 group hover:scale-110 active:scale-105 transition-all">
+                <li className="p-3 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 group hover:scale-110 active:scale-105 transition-all scale-75 lg:scale-100">
                   <a
                     href="https://www.linkedin.com/in/jae-yaon-b5264327a"
                     target="_blank"
@@ -112,7 +122,7 @@ const Main = () => {
                     </svg>
                   </a>
                 </li>
-                <li className="p-3 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 group hover:scale-110 active:scale-105 transition-all">
+                <li className="p-3 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 group hover:scale-110 active:scale-105 transition-all scale-75 lg:scale-100">
                   <a href="https://github.com/jaeyaon" target="_blank">
                     <svg
                       className="h-8 w-8 text-black group-hover:text-white"

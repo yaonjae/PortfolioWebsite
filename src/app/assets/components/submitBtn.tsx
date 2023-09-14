@@ -6,7 +6,7 @@ export default function SubmitBtn() {
   return (
     <button
       type="submit"
-      className="bg-blue-700 hover:drop-shadow-lg p-2 font-bold flex justify-center items-center text-white hover:scale-105 rounded-md duration-100 active:scale-105 transition-all outline-none disabled:scale-100 disabled:bg-opacity-50"
+      className="bg-blue-700 hover:drop-shadow-lg p-2 font-bold text-sm lg:text-base flex justify-center items-center text-white hover:scale-105 rounded-md duration-100 active:scale-105 transition-all outline-none disabled:scale-100 disabled:bg-opacity-50"
     >
       {pending ? (
         <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
