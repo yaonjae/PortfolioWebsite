@@ -34,15 +34,23 @@ export const links = [
 ] as const;
 
 export const skillsData = [
-  { name: "HTML", category: "Front-end", proficiency: 80 },
-  { name: "CSS", category: "Front-end", proficiency: 85 },
-  { name: "React JS", category: "Front-end", proficiency: 70 },
-  { name: "Tailwind CSS", category: "Front-end", proficiency: 80 },
-  { name: "JavaScript", category: "Back-end", proficiency: 70 },
-  { name: "TypeScript", category: "Back-end", proficiency: 65 },
-  { name: "Prisma ORM", category: "Back-end", proficiency: 60 },
-  { name: "Express JS", category: "Back-end", proficiency: 70 },
-  { name: "MySQL", category: "Back-end", proficiency: 60 },
+  { name: "HTML", category: "Web Development" },
+  { name: "CSS", category: "Web Development" },
+  { name: "JavaScript", category: "Web Development" },
+  { name: "TypeScript", category: "Web Development" },
+  { name: "Tailwind CSS", category: "Web Development" },
+  { name: "React JS", category: "Web Development" },
+  { name: "Next JS", category: "Web Development" },
+  { name: "Vite JS", category: "Web Development" },
+  { name: "Node JS", category: "Web Development" },
+  { name: "Express JS", category: "Web Development" },
+  { name: "Prisma ORM", category: "Web Development" },
+  { name: "MySQL", category: "Web Development" },
+  { name: "Java", category: "Others" },
+  { name: "C++", category: "Others" },
+  { name: "C#", category: "Others" },
+
+
 ];
 
 export const educationData = [

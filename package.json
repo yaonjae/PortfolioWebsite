@@ -1,8 +1,11 @@
 {
+  "homepage": "https://jaeyaon.github.io/portfolio-website",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -37,6 +40,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@types/react-vertical-timeline-component": "^3.3.3"
+    "@types/react-vertical-timeline-component": "^3.3.3",
+    "gh-pages": "^6.0.0"
   }
 }

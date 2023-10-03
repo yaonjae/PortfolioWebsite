@@ -21,12 +21,16 @@ const Skills = () => {
       animateDetails.start({ opacity: 0, y: -50 });
       animateProficiency.start({ opacity: 0, x: -100 });
     }
-  }, [inView]);
+  }, [inView, animateH1, animateDetails, animateProficiency]);
 
   return (
     <>
-      <div ref={ref} id="Skills" className="w-full h-fit flex justify-center items-center">
-        <div className="w-3/4 h-full flex flex-col justify-center px-4 lg:px-0">
+      <div
+        ref={ref}
+        id="Skills"
+        className="w-full h-fit flex justify-center items-center"
+      >
+        <div className="w-3/4 h-full flex flex-col justify-center px-4 lg:px-0 mb-10 lg:mb-20">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={animateH1}
@@ -34,86 +38,62 @@ const Skills = () => {
           >
             <span>My Skills</span>
           </motion.h1>
-          <div className="w-full flex flex-col lg:flex-row gap-0 lg:gap-10">
+          <div className="w-full flex flex-col gap-5 lg:gap-10">
             <div className="w-full">
               <motion.h1
                 initial={{ opacity: 0 }}
                 animate={animateH1}
-                className="w-full text-center text-sm lg:text-base font-bold py-1 px-2 mb-4 uppercase rounded-full drop-shadow-lg text-white bg-blue-700 bg-opacity-70"
+                className="text-center text-sm lg:text-base font-bold py-1 px-2 mb-4 uppercase drop-shadow-lg bg-blue-700 rounded-full text-white"
               >
-                Front-end
+                Web Development Skills
               </motion.h1>
-              {skillsData
-                .filter((skill) => skill.category === "Front-end")
-                .map((skill, index) => (
-                  <motion.div
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={animateDetails}
-                    transition={{ delay: index * 0.2 + 0.5, type: 'spring', bounce: 0.3 }}
-                    key={skill.name}
-                    className="mb-10"
-                  >
-                    <div className="flex justify-between items-center">
-                      <h1 className="font-bold text-white text-lg lg:text-xl drop-shadow-lg">
-                        {skill.name}
-                      </h1>
-                      <h2 className="font-bold text-blue-500 text-base lg:text-lg drop-shadow-lg">
-                        {skill.proficiency}%
-                      </h2>
-                    </div>
-                    <div className="relative pt-1">
-                      <div className="overflow-hidden h-1 lg:h-2 mb-4 text-xs flex rounded-full drop-shadow-lg bg-neutral-600">
-                        <motion.div
-                          initial={{ opacity: 0, x: -100 }}
-                          animate={animateProficiency}
-                          transition={{ duration: 0.5, delay: 1.5 }}
-                          style={{ width: `${skill.proficiency}%` }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap border-black border-1 rounded-full text-white justify-center bg-gradient-to-r from-cyan-500 to-blue-500"
-                        ></motion.div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
+              <div className="flex flex-wrap justify-center gap-3">
+                {skillsData
+                  .filter((skill) => skill.category === "Web Development")
+                  .map((skill, index) => (
+                    <motion.p
+                      initial={{ opacity: 0, y: -50 }}
+                      animate={animateDetails}
+                      transition={{
+                        delay: index * 0.1 + 0.1,
+                        type: "spring",
+                        bounce: 0.3,
+                      }}
+                      key={skill.name}
+                      className="text-white text-sm lg:text-base py-1 lg:py-2 px-2 lg:px-4 bg-blue-700 rounded drop-shadow-lg font-bold"
+                    >
+                      {skill.name}
+                    </motion.p>
+                  ))}
+              </div>
             </div>
             <div className="w-full">
               <motion.h1
                 initial={{ opacity: 0 }}
                 animate={animateH1}
-                className="w-full text-center text-sm lg:text-base font-bold py-1 px-2 mb-4 uppercase rounded-full drop-shadow-lg text-white bg-blue-700 bg-opacity-70"
+                className="text-center text-sm lg:text-base font-bold py-1 px-2 mb-4 uppercase drop-shadow-lg bg-blue-700 rounded-full text-white"
               >
-                Back-end
+                Other Programming Skills
               </motion.h1>
-              {skillsData
-                .filter((skill) => skill.category === "Back-end")
-                .map((skill, index) => (
-                  <motion.div
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={animateDetails}
-                    transition={{ delay: index * 0.2 + 0.5, type: 'spring', bounce: 0.3 }}
-                    key={skill.name}
-                    className="mb-10"
-                  >
-                    <div className="flex justify-between items-center">
-                      <h1 className="font-bold text-white text-lg lg:text-xl drop-shadow-lg">
-                        {skill.name}
-                      </h1>
-                      <h2 className="font-bold text-blue-500 text-base lg:text-lg drop-shadow-lg">
-                        {skill.proficiency}%
-                      </h2>
-                    </div>
-                    <div className="relative pt-1">
-                      <div className="overflow-hidden h-1 lg:h-2 mb-4 text-xs flex rounded-full drop-shadow-lg bg-neutral-600">
-                        <motion.div
-                          initial={{ opacity: 0, x: -100 }}
-                          animate={animateProficiency}
-                          transition={{ duration: 0.5, delay: 1.5 }}
-                          style={{ width: `${skill.proficiency}%` }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap border-black border-1 rounded-full text-white justify-center bg-gradient-to-r from-cyan-500 to-blue-500"
-                        ></motion.div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
+              <div className="flex flex-wrap justify-center gap-3">
+                {skillsData
+                  .filter((skill) => skill.category === "Others")
+                  .map((skill, index) => (
+                    <motion.p
+                      initial={{ opacity: 0, y: -50 }}
+                      animate={animateDetails}
+                      transition={{
+                        delay: index * 0.1 + 0.1,
+                        type: "spring",
+                        bounce: 0.3,
+                      }}
+                      key={skill.name}
+                      className="text-white text-sm lg:text-base py-1 lg:py-2 px-2 lg:px-4 bg-blue-700 rounded drop-shadow-lg font-bold"
+                    >
+                      {skill.name}
+                    </motion.p>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
