@@ -123,7 +123,7 @@ const Main = () => {
                   </a>
                 </li>
                 <li className="p-3 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 group hover:scale-110 active:scale-105 transition-all scale-75 lg:scale-100">
-                  <a href="https://github.com/jaeyaon" target="_blank">
+                  <a href="https://github.com/yaonjae" target="_blank">
                     <svg
                       className="h-8 w-8 text-black group-hover:text-white"
                       viewBox="0 0 24 24"
