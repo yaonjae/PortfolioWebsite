@@ -6,7 +6,7 @@ import { educationData } from "../lib/data";
 import { useEffect } from "react";
 
 const Education = () => {
-  const { ref, inView } = usePageInView("Education", 0.5);
+  const { ref, inView } = usePageInView("Education", 0.8);
   const animateH1 = useAnimation();
   const animateTimeline = useAnimation();
 
@@ -22,7 +22,7 @@ const Education = () => {
 
   return (
     <>
-      <div ref={ref} id="Education" className="w-full h-fit flex justify-center items-center my-5 lg:my-20">
+      <div ref={ref} id="Education" className="w-full h-screen flex justify-center items-center my-5 lg:my-20">
         <div className="w-3/4 h-full flex flex-col justify-center items-center gap-0 lg:gap-10">
           <motion.h1
             initial={{ opacity: 0 }}

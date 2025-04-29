@@ -38,11 +38,11 @@ export const skillsData = [
   { name: "CSS", category: "Web Development" },
   { name: "JavaScript", category: "Web Development" },
   { name: "TypeScript", category: "Web Development" },
+  { name: "PHP", category: "Web Development" },
   { name: "Tailwind CSS", category: "Web Development" },
   { name: "React JS", category: "Web Development" },
   { name: "Next JS", category: "Web Development" },
   { name: "Vite JS", category: "Web Development" },
-  { name: "Node JS", category: "Web Development" },
   { name: "Express JS", category: "Web Development" },
   { name: "Prisma ORM", category: "Web Development" },
   { name: "MySQL", category: "Web Development" },
@@ -85,7 +85,7 @@ export const educationData = [
 ];
 
 export const userDetails =
-  "A dedicated Northwest Samar State University graduate with a Bachelor of Science in Computer Engineering. Experienced in web and mobile app development, and microcontroller programming. Passionate about programming, and systems development. Champion in the STI Calbayog intramural programming competition and chosen to be one of the representatives for the regional programming competition at STI West Negros University. Created a Capstone Project, Android-based Automation System for Homes and Offices, allowing users to control and monitor various appliances, devices, and sensors through an Android application. Additionally, I have developed an Inventory Management System using React JS, Tailwind CSS, Express JS, and Prisma as the final project for the DX Coding Bootcamp.";
+  "I am a dedicated web developer with a Bachelor’s degree in Computer Engineering from Northwest Samar State University. While my primary focus is frontend development, I also have experience in backend technologies, allowing me to build full-stack web applications. I am passionate about creating seamless, responsive, and user-friendly interfaces while continuously improving my backend skills. Continuously learning and improving, I am eager to contribute to innovative projects that push the boundaries of web development.";
 
 export const userEmail = "yaon.jae.2001@gmailcom";
 

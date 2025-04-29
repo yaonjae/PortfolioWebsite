@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 import { userAddress, userEmail, userMobileNumber } from "../lib/data";
 
 const Contact = () => {
-  const { ref, inView } = usePageInView("Contact", 0.6);
+  const { ref, inView } = usePageInView("Contact", 0.8);
   const animateMail = useAnimation();
   const animateContact = useAnimation();
 
@@ -25,7 +25,7 @@ const Contact = () => {
 
   return (
     <>
-      <div ref={ref} id="Contact" className="w-full h-fit my-10 flex justify-center items-center">
+      <div ref={ref} id="Contact" className="w-full h-screen my-10 flex justify-center items-center">
         <div className="w-3/4 h-full flex flex-col-reverse lg:flex-row justify-center items-center gap-7">
           <motion.div
             initial={{ opacity: 0, scale: 1 }}
@@ -72,10 +72,10 @@ const Contact = () => {
             className="w-full h-full flex flex-col justify-center items-start"
           >
             <h1 className="w-full font-bold text-3xl xl:text-4xl text-center lg:text-start">
-              <span>I'd love to hear from you.</span>
+              <span>{`I'd love to hear from you.`}</span>
             </h1>
             <p className="w-full text-lg xl:text-xl text-white text-center lg:text-start">
-              Leave a message, and I'll get back to you as soon as possible.
+              {`Leave a message, and I'll get back to you as soon as possible.`}
             </p>
             <div className="w-full flex flex-col items-center lg:items-start gap-0 lg:gap-10 mt-4 lg:mt-10">
               <div className="w-fit flex items-center gap-4 scale-90 lg:scale-100">

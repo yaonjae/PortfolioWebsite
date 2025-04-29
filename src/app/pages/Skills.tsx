@@ -6,7 +6,7 @@ import { skillsData } from "../lib/data";
 import { motion, useAnimation } from "framer-motion";
 
 const Skills = () => {
-  const { ref, inView } = usePageInView("Skills", 0.5);
+  const { ref, inView } = usePageInView("Skills", 0.8);
   const animateH1 = useAnimation();
   const animateDetails = useAnimation();
   const animateProficiency = useAnimation();
@@ -28,7 +28,7 @@ const Skills = () => {
       <div
         ref={ref}
         id="Skills"
-        className="w-full h-fit flex justify-center items-center"
+        className="w-full h-screen flex justify-center items-center"
       >
         <div className="w-3/4 h-full flex flex-col justify-center px-4 lg:px-0 mb-10 lg:mb-20">
           <motion.h1

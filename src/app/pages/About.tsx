@@ -7,7 +7,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
 const About = () => {
-  const { ref, inView } = usePageInView("About");
+  const { ref, inView } = usePageInView("About", 0.8);
   const animateAbout = useAnimation();
   const animateImage = useAnimation();
 
@@ -23,7 +23,7 @@ const About = () => {
 
   return (
     <>
-      <div ref={ref} id="About" className="w-full h-fit flex justify-center items-center">
+      <div ref={ref} id="About" className="w-full h-screen flex justify-center items-center">
         <div className="w-3/4 h-full flex flex-col justify-center items-center">
           <motion.div
             initial={{ opacity: 0, y: -50 }}

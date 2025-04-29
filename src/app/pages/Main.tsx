@@ -7,7 +7,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useEffect } from "react";
 
 const Main = () => {
-  const { ref, inView } = usePageInView("Index");
+  const { ref, inView } = usePageInView("Index", 0.8);
 
   const [text] = useTypewriter({
     words: ["Web Development", "Web Design", "Programming"],
@@ -68,7 +68,7 @@ const Main = () => {
             className="w-full flex flex-col gap-1 lg:gap-4 justify-center items-center"
           >
             <h2 className="font-semibold text-white text-xl lg:text-2xl drop-shadow-md">
-              Hi there, I'm Jae Yaon
+              {`Hi there, I'm Jae Yaon`}
             </h2>
             <h1 className="font-extrabold text-center text-white text-2xl lg:text-3xl xl:text-4xl">
               I am into <span>{text}</span>
