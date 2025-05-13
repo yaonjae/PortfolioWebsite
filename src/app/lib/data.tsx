@@ -45,7 +45,7 @@ export const skillsData = [
   { name: "Vite JS", category: "Web Development" },
   { name: "Express JS", category: "Web Development" },
   { name: "Prisma ORM", category: "Web Development" },
-  { name: "MySQL", category: "Web Development" },
+  { name: "PostgreSQL", category: "Web Development" },
   { name: "Java", category: "Others" },
   { name: "C++", category: "Others" },
   { name: "C#", category: "Others" },
