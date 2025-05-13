@@ -20,7 +20,7 @@ const Sidebar = () => {
           stiffness: 380,
           damping: 30,
         }}
-        className="fixed w-fit lg:w-28 h-full p-6 flex justify-center items-center z-[999]"
+        className="fixed w-fit lg:w-28 h-full p-6 flex justify-center items-center z-[999] pointer-events-none"
       >
         <div className="bg-white bg-opacity-5 w-full p-2 rounded-full">
           <ul className="flex flex-col justify-center items-center my-4 gap-2 lg:gap-6">

@@ -7,7 +7,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
 const About = () => {
-  const { ref, inView } = usePageInView("About", 0.8);
+  const { ref, inView } = usePageInView("About", 0.2);
   const animateAbout = useAnimation();
   const animateImage = useAnimation();
 
@@ -43,7 +43,7 @@ const About = () => {
             <h1 className="w-full text-3xl md:text-4xl lg:text-5xl font-bold">
               <span>About Me</span>
             </h1>
-            <div className="border-2 rounded-full my-4"></div>
+            <div className="border-2 border-cyan-600 rounded-full my-4"></div>
             <p className="text-white text-sm md:text-base lg:text-lg drop-shadow-lg">{userDetails}</p>
           </motion.div>
         </div>

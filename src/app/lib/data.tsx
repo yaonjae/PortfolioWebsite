@@ -4,6 +4,20 @@ import IconAbout from "./sidebarIcons/IconAbout";
 import IconEducation from "./sidebarIcons/IconEducation";
 import IconSkills from "./sidebarIcons/IconSkills";
 import IconContact from "./sidebarIcons/IconContact";
+import html from "./skillsIcons/HTML5.png";
+import css from "./skillsIcons/CSS3.png";
+import js from "./skillsIcons/JavaScript.png";
+import ts from "./skillsIcons/TypeScript (1).png";
+import php from "./skillsIcons/PHP (1).png";
+import tailwind from "./skillsIcons/Tailwind CSS.png";
+import bootstrap from "./skillsIcons/Bootstrap.png";
+import react from "./skillsIcons/React.png";
+import next from "./skillsIcons/Next.js.png";
+import vite from "./skillsIcons/Vite.js.png";
+import express from "./skillsIcons/Express.png";
+import prsima from "./skillsIcons/prisma.848x1024.png";
+import posgresql  from "./skillsIcons/PostgresSQL.png";
+import git  from "./skillsIcons/Git.png";
 
 export const links = [
   {
@@ -34,23 +48,20 @@ export const links = [
 ] as const;
 
 export const skillsData = [
-  { name: "HTML", category: "Web Development" },
-  { name: "CSS", category: "Web Development" },
-  { name: "JavaScript", category: "Web Development" },
-  { name: "TypeScript", category: "Web Development" },
-  { name: "PHP", category: "Web Development" },
-  { name: "Tailwind CSS", category: "Web Development" },
-  { name: "React JS", category: "Web Development" },
-  { name: "Next JS", category: "Web Development" },
-  { name: "Vite JS", category: "Web Development" },
-  { name: "Express JS", category: "Web Development" },
-  { name: "Prisma ORM", category: "Web Development" },
-  { name: "PostgreSQL", category: "Web Development" },
-  { name: "Java", category: "Others" },
-  { name: "C++", category: "Others" },
-  { name: "C#", category: "Others" },
-
-
+  { name: "HTML", icon: html },
+  { name: "CSS", icon: css },
+  { name: "JavaScript", icon: js },
+  { name: "TypeScript", icon: ts },
+  { name: "PHP", icon: php },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Bootstrap", icon: bootstrap },
+  { name: "React JS", icon: react },
+  { name: "Next JS", icon: next },
+  { name: "Vite JS", icon: vite },
+  { name: "Express JS", icon: express },
+  { name: "Prisma ORM", icon: prsima },
+  { name: "PostgreSQL", icon: posgresql },
+  { name: "Git", icon: git },
 ];
 
 export const educationData = [
@@ -91,4 +102,4 @@ export const userEmail = "yaon.jae.2001@gmailcom";
 
 export const userMobileNumber = "+63917 302 6675";
 
-export const userAddress = "San Roque, San Isidro, Northern Samar";
+export const userAddress = ["San Roque, San Isidro, Northern Samar", "P3, Brgy. Obrero, Calbayog City, Samar (Current)"];

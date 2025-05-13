@@ -6,7 +6,7 @@ import { educationData } from "../lib/data";
 import { useEffect } from "react";
 
 const Education = () => {
-  const { ref, inView } = usePageInView("Education", 0.8);
+  const { ref, inView } = usePageInView("Education", 0.2);
   const animateH1 = useAnimation();
   const animateTimeline = useAnimation();
 

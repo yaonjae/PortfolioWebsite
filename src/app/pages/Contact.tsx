@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 import { userAddress, userEmail, userMobileNumber } from "../lib/data";
 
 const Contact = () => {
-  const { ref, inView } = usePageInView("Contact", 0.8);
+  const { ref, inView } = usePageInView("Contact", 0.2);
   const animateMail = useAnimation();
   const animateContact = useAnimation();
 
@@ -139,9 +139,13 @@ const Contact = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <p className="text-white font-bold text-sm">
-                  {userAddress}
-                </p>
+                <div className="flex-col space-y-2">
+                  {userAddress.map((address) => (
+                    <p key={address} className="text-white font-bold text-sm">
+                      {address}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>

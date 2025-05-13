@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { usePageInView } from "../lib/hooks";
 import { skillsData } from "../lib/data";
 import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
 
 const Skills = () => {
-  const { ref, inView } = usePageInView("Skills", 0.8);
+  const { ref, inView } = usePageInView("Skills", 0.2);
   const animateH1 = useAnimation();
   const animateDetails = useAnimation();
   const animateProficiency = useAnimation();
@@ -38,63 +39,23 @@ const Skills = () => {
           >
             <span>My Skills</span>
           </motion.h1>
-          <div className="w-full flex flex-col gap-5 lg:gap-10">
-            <div className="w-full">
-              <motion.h1
-                initial={{ opacity: 0 }}
-                animate={animateH1}
-                className="text-center text-sm lg:text-base font-bold py-1 px-2 mb-4 uppercase drop-shadow-lg bg-blue-700 rounded-full text-white"
+          <div className="flex flex-wrap justify-center items-start gap-5 p-4 w-full overflow-y-auto">
+            {skillsData.map((skill, index) => (
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={animateDetails}
+                transition={{
+                  delay: index * 0.1 + 0.1,
+                  type: "spring",
+                  bounce: 0.3,
+                }}
+                key={skill.name}
+                className="flex flex-col w-40 h-40 justify-center items-center border-2 border-cyan-600 rounded-md text-white gap-2 bg-[rgba(255,255,255,0.05)]"
               >
-                Web Development Skills
-              </motion.h1>
-              <div className="flex flex-wrap justify-center gap-3">
-                {skillsData
-                  .filter((skill) => skill.category === "Web Development")
-                  .map((skill, index) => (
-                    <motion.p
-                      initial={{ opacity: 0, y: -50 }}
-                      animate={animateDetails}
-                      transition={{
-                        delay: index * 0.1 + 0.1,
-                        type: "spring",
-                        bounce: 0.3,
-                      }}
-                      key={skill.name}
-                      className="text-white text-sm lg:text-base py-1 lg:py-2 px-2 lg:px-4 bg-blue-700 rounded drop-shadow-lg font-bold"
-                    >
-                      {skill.name}
-                    </motion.p>
-                  ))}
-              </div>
-            </div>
-            <div className="w-full">
-              <motion.h1
-                initial={{ opacity: 0 }}
-                animate={animateH1}
-                className="text-center text-sm lg:text-base font-bold py-1 px-2 mb-4 uppercase drop-shadow-lg bg-blue-700 rounded-full text-white"
-              >
-                Other Programming Skills
-              </motion.h1>
-              <div className="flex flex-wrap justify-center gap-3">
-                {skillsData
-                  .filter((skill) => skill.category === "Others")
-                  .map((skill, index) => (
-                    <motion.p
-                      initial={{ opacity: 0, y: -50 }}
-                      animate={animateDetails}
-                      transition={{
-                        delay: index * 0.1 + 0.1,
-                        type: "spring",
-                        bounce: 0.3,
-                      }}
-                      key={skill.name}
-                      className="text-white text-sm lg:text-base py-1 lg:py-2 px-2 lg:px-4 bg-blue-700 rounded drop-shadow-lg font-bold"
-                    >
-                      {skill.name}
-                    </motion.p>
-                  ))}
-              </div>
-            </div>
+                <Image src={skill.icon} alt={skill.name} className="w-24 h-24" />
+                <p>{skill.name}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
