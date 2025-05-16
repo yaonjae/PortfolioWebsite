@@ -19,8 +19,13 @@ const Skills = () => {
       animateProficiency.start({ opacity: 1, x: 0 });
     } else {
       animateH1.start({ opacity: 0 });
-      animateDetails.start({ opacity: 0, y: -50 });
-      animateProficiency.start({ opacity: 0, x: -100 });
+      animateDetails.start(() => ({
+        opacity: 0,
+        y: -50,
+        transition: {
+          duration: 0.3,
+        },
+      }));
     }
   }, [inView, animateH1, animateDetails, animateProficiency]);
 
@@ -50,7 +55,7 @@ const Skills = () => {
                   bounce: 0.3,
                 }}
                 key={skill.name}
-                className="flex flex-col w-40 h-40 justify-center items-center border-2 border-cyan-600 rounded-md text-white gap-2 bg-[rgba(255,255,255,0.05)]"
+                className="flex flex-col w-40 h-40 justify-center items-center space-y-2 text-white bg-white rounded-md bg-opacity-5 drop-shadow-lg"
               >
                 <Image src={skill.icon} alt={skill.name} className="w-24 h-24" />
                 <p>{skill.name}</p>

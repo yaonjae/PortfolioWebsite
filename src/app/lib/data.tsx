@@ -14,10 +14,12 @@ import bootstrap from "./skillsIcons/Bootstrap.png";
 import react from "./skillsIcons/React.png";
 import next from "./skillsIcons/Next.js.png";
 import vite from "./skillsIcons/Vite.js.png";
+import ci from "./skillsIcons/CodeIgniter.png";
 import express from "./skillsIcons/Express.png";
 import prsima from "./skillsIcons/prisma.848x1024.png";
-import posgresql  from "./skillsIcons/PostgresSQL.png";
-import git  from "./skillsIcons/Git.png";
+import mysql from "./skillsIcons/MySQL.png";
+import posgresql from "./skillsIcons/PostgresSQL.png";
+import git from "./skillsIcons/Git.png";
 
 export const links = [
   {
@@ -58,8 +60,10 @@ export const skillsData = [
   { name: "React JS", icon: react },
   { name: "Next JS", icon: next },
   { name: "Vite JS", icon: vite },
+  { name: "CodeIgniter", icon: ci },
   { name: "Express JS", icon: express },
   { name: "Prisma ORM", icon: prsima },
+  { name: "MySQL", icon: mysql },
   { name: "PostgreSQL", icon: posgresql },
   { name: "Git", icon: git },
 ];
@@ -69,8 +73,7 @@ export const educationData = [
     title: "Senior High School",
     date: "AUG 2017 - MAY 2019",
     location: "STI Calbayog",
-    address: "Calbayog City, Western Samar",
-    count: "1",
+    address: "Brgy. Rawis, Calbayog City, Samar",
     description:
       "Enrolled as a ITMAWD (IT in Mobile App and Web Development) strand student. Gained a comprehensive understanding of the concepts of computer programming, scripting languages, build iOS and Android applications, and create and optimize content for mobile and web applications.",
   },
@@ -78,8 +81,7 @@ export const educationData = [
     title: "Bachelor of Science in Computer Engineering",
     date: "AUG 2019 - MAY 2023",
     location: "Northwest Samar State University",
-    address: "Calbayog City, Western Samar",
-    count: "2",
+    address: "Rueda St., Calbayog City, Samar",
     description:
       "Studied the analysis and design of digital computers, as well as the analysis, design, and operation of systems. Gained principles from electrical engineering and computer science to design and analyze all hardware and software required for a computer system.",
   },
@@ -88,11 +90,29 @@ export const educationData = [
     date: "JUL 2023 - AUG 2023",
     location: "DX Lab",
     address:
-      "2nd Floor, M.A.R. Bldg., Rosales Boulevard, Umbria St., Calbayog City",
-    count: "3",
+      "2nd Floor, M.A.R. Bldg., Rosales Blvd., Umbria St., Calbayog City, Samar",
     description:
       "An 8-week training program designed to teach individuals the essential skills and knowledge needed to become web developers. These programs are typically focused on providing practical, hands-on experience in web development and aim to prepare students for entry-level positions in the field.",
   },
+];
+
+export const experienceData = [
+  {
+    position: "Junior Front-End Developer",
+    date: "OCT 2023 - Present",
+    location: "Digital Transformation Calbayog",
+    address: "2nd Floor, VIRSCO Bldg., Rosales Blvd., Umbria St., Calbayog City",
+    projects: [
+      {
+        title: 'Payruler',
+        description: 'Payruler is a comprehensive payroll management system designed to streamline and automate payroll processes for businesses. It offers features such as employee data management, payroll calculations, tax compliance, and reporting, ensuring accuracy and efficiency in handling payroll tasks.'
+      },
+      {
+        title: 'Ebiyahe',
+        description: 'Ebiyahe is a travel management platform designed to simplify the booking and planning process for travelers. It offers features such as itinerary creation, booking management, and real-time updates, ensuring a seamless travel experience for users.'
+      },
+    ]
+  }
 ];
 
 export const userDetails =
