@@ -7,11 +7,21 @@ import Skills from "./pages/Skills";
 export default function Home() {
   return (
     <>
-      <Main />
-      <About />
-      <Education />
-      <Skills />
-      <Contact />
+      <section className="snap-center h-screen">
+        <Main />
+      </section>
+      <section className="snap-center h-screen">
+        <About />
+      </section>
+      <section className="snap-center h-screen">
+        <Education />
+      </section>
+      <section className="snap-center h-screen">
+        <Skills />
+      </section>
+      <section className="snap-center h-screen">
+        <Contact />
+      </section>
     </>
   );
 }

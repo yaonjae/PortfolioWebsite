@@ -21,13 +21,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scroll-smooth font-sans bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800 via-gray-900 to-black bg-fixed"
+      className="scroll-smooth font-sans bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800 via-gray-900 to-black bg-fixed scroll-hidden"
     >
       <body className={inter.className}>
         <ActivePageContextProvider>
           <Sidebar />
-          {children}
-          <Footer />
+          <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth scroll-hidden">
+            {children}
+            <section className="snap-center">
+              <Footer />
+            </section>
+          </div>
           <Toaster
             position="bottom-right"
             toastOptions={{
