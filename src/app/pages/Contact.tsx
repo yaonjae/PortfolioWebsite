@@ -94,7 +94,7 @@ const Contact = () => {
                 </svg>
                 <p className="text-white font-bold text-sm">
                   <a
-                    href="mailto:yaon.jae.2001@gmail.com"
+                    href={`mailto:${userEmail}`}
                     className="underline font-bold hover:text-blue-500 duration-100"
                   >
                     {userEmail}

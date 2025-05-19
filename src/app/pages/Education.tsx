@@ -77,6 +77,8 @@ const Education = () => {
                   key={index}
                   variants={cardVariants}
                   layout
+                  animate={{ scale: isExpanded ? 1.05 : 1 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   className="relative text-white bg-white rounded-md bg-opacity-5 p-6 overflow-hidden drop-shadow-lg cursor-pointer"
                 >
                   <h1 className="font-semibold"><span>{education.title}</span></h1>
@@ -118,6 +120,8 @@ const Education = () => {
                   key={`exp-${index}`}
                   variants={cardVariants}
                   layout
+                  animate={{ scale: isExpanded ? 1.05 : 1 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   className="relative text-white bg-white rounded-md bg-opacity-5 p-6 overflow-hidden drop-shadow-lg cursor-pointer"
                 >
                   <h1 className="font-semibold"><span>{experience.position}</span></h1>

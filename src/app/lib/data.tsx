@@ -101,7 +101,7 @@ export const experienceData = [
     position: "Junior Front-End Developer",
     date: "OCT 2023 - Present",
     location: "Digital Transformation Calbayog",
-    address: "2nd Floor, VIRSCO Bldg., Rosales Blvd., Umbria St., Calbayog City",
+    address: "2nd Floor, VIRSCO Bldg., Rosales Blvd., Umbria St., Calbayog City, Samar",
     projects: [
       {
         title: 'Payruler',
@@ -115,11 +115,29 @@ export const experienceData = [
   }
 ];
 
+export const userInfo = {
+  name: 'Jae A. Yaon',
+  birthdate: 'March 20, 2001',
+  age: new Date().getFullYear() - 2001 - (new Date() < new Date(new Date().getFullYear(), 2, 20) ? 1 : 0),
+  gender: 'Male',
+  status: 'Single',
+  nationality: 'Filipino',
+  quote: '“Small daily improvements over time lead to stunning results.” — Robin Sharma',
+  hobby: [
+    'Programming',
+    'Fitness Training',
+    'Film Viewing',
+    'Gaming',
+    'Travel and Adventure',
+    'Food'
+  ]
+};
+
 export const userDetails =
   "I am a dedicated web developer with a Bachelor’s degree in Computer Engineering from Northwest Samar State University. While my primary focus is frontend development, I also have experience in backend technologies, allowing me to build full-stack web applications. I am passionate about creating seamless, responsive, and user-friendly interfaces while continuously improving my backend skills. Continuously learning and improving, I am eager to contribute to innovative projects that push the boundaries of web development.";
 
-export const userEmail = "yaon.jae.2001@gmailcom";
+export const userEmail = "yaon.jae.2001@gmail.com";
 
 export const userMobileNumber = "+63917 302 6675";
 
-export const userAddress = ["San Roque, San Isidro, Northern Samar", "P3, Brgy. Obrero, Calbayog City, Samar (Current)"];
+export const userAddress = ["San Roque, San Isidro, Northern Samar, 6409", "P3, Brgy. Obrero, Calbayog City, Samar, 6710 (Current)"];
