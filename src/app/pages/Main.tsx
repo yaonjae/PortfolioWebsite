@@ -5,6 +5,7 @@ import { usePageInView } from "../lib/hooks";
 import { motion, useAnimation } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useEffect } from "react";
+import Cube from "../assets/components/cube";
 
 const Main = () => {
   const { ref, inView } = usePageInView("Index", 0.2);
@@ -42,24 +43,7 @@ const Main = () => {
             animate={animateImage}
             className="w-full flex items-center justify-center"
           >
-            <div className="w-80 h-80 border-cyan-500 relative top-8 border-b-4 border-r-4 rounded-xl hidden lg:block scale-75 xl:scale-100">
-              <div className="w-80 h-80 border-cyan-500 relative -left-14 -top-14 border-t-4 border-l-4 rounded-xl">
-                <div className="w-80 h-96 bg-transparent relative left-5 -top-10 overflow-hidden border-blue-500 border-b-8">
-                  <div className="w-80 h-80 bg-transparent absolute top-16 left-0 flex justify-center items-center border-blue-500 border-8 group">
-                    <img
-                      className="h-[28rem] w-[26rem] mb-10 group-hover:scale-110 transition-all duration-200"
-                      src={profilePic.src}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-64 h-64 border-8 border-cyan-600 rounded-full drop-shadow-lg overflow-hidden group block lg:hidden scale-75 md:scale-100">
-              <img
-                className="group-hover:scale-110 transition-all duration-200"
-                src={profilePic.src}
-              />
-            </div>
+            <Cube />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -68,7 +52,7 @@ const Main = () => {
             className="w-full flex flex-col gap-1 lg:gap-4 justify-center items-center"
           >
             <h2 className="font-semibold text-white text-xl lg:text-2xl drop-shadow-md">
-              {`Hi there, I'm Jae Yaon`}
+              {`Hi there, I'm Jae`}
             </h2>
             <h1 className="font-extrabold text-center text-white text-2xl lg:text-3xl xl:text-4xl">
               I am into <span>{text}</span>
