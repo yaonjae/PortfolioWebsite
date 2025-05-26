@@ -7,10 +7,8 @@ export default function Cube() {
 
     useAnimationFrame((t) => {
         if (ref.current) {
-            // const rotate = Math.sin(t / 10000) * 200;
-            // const y = (1 + Math.sin(t / 1000)) * -50;
-            const rotate = Math.sin(t / 4000) * 45;
-            const y = Math.sin(t / 1000) * 30;
+            const rotate = Math.sin(t / 10000) * 200;
+            const y = (1 + Math.sin(t / 1000)) * -50;
             ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
         }
     });

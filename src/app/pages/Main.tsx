@@ -6,6 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useEffect } from "react";
 import Cube from "../assets/components/cube";
+import { intro} from "../lib/data";
 
 const Main = () => {
   const { ref, inView } = usePageInView("Index", 0.2);
@@ -49,7 +50,7 @@ const Main = () => {
             initial={{ opacity: 0, x: -100 }}
             animate={animateName}
             transition={{ delay: 0.5 }}
-            className="w-full flex flex-col gap-1 lg:gap-4 justify-center items-center"
+            className="w-full flex flex-col gap-1 lg:gap-4 justify-center items-start"
           >
             <h2 className="font-semibold text-white text-xl lg:text-2xl drop-shadow-md">
               {`Hi there, I'm Jae`}
@@ -60,9 +61,8 @@ const Main = () => {
                 <Cursor cursorStyle="|" />
               </span>
             </h1>
-            <h2 className="text-white text-base lg:text-xl drop-shadow-md text-center">
-              Passionate about web development, fueled by a love for
-              programming.
+            <h2 className="text-white text-xs lg:text-base drop-shadow-md">
+              {intro}
             </h2>
             <div className="follow-list">
               <ol className="flex gap-1 lg:gap-4">

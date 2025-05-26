@@ -6,7 +6,7 @@ const IconEducation: React.FC = () => (
     viewBox="0 0 24 24"
     strokeWidth="2"
     stroke="currentColor"
-    className="w-8 h-8"
+    className="h-6 w-6"
   >
     <path
       strokeLinecap="round"

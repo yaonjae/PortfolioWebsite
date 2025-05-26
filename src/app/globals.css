@@ -53,41 +53,40 @@ h1 span {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background: radial-gradient(circle at center, rgba(0, 200, 255, 0.2), rgba(0, 100, 255, 0.1));
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  backdrop-filter: blur(2px);
+  box-shadow:
+    0 0 30px rgba(0, 200, 255, 0.15),
+    inset 0 0 40px rgba(0, 255, 255, 0.15);
+  animation: flicker 2s infinite ease-in-out;
 }
 
 .front {
   transform: rotateY(0deg) translateZ(150px);
-  background: radial-gradient(ellipse at center, #1f2937, #111827, #000000);
-  border: 5px solid #141414;
 }
 
 .right {
   transform: rotateY(90deg) translateZ(150px);
-  background: radial-gradient(ellipse at center, #1f2937, #111827, #000000);
-  border: 5px solid #141414;
 }
 
 .back {
   transform: rotateY(180deg) translateZ(150px);
-  background: radial-gradient(ellipse at center, #1f2937, #111827, #000000);
-  border: 5px solid #141414;
 }
 
 .left {
   transform: rotateY(-90deg) translateZ(150px);
-  background: radial-gradient(ellipse at center, #1f2937, #111827, #000000);
-  border: 5px solid #141414;
 }
 
 .top {
   transform: rotateX(90deg) translateZ(150px);
-  background: radial-gradient(ellipse at center, #1f2937, #111827, #000000);
-  border: 5px solid #141414;
 }
 
 .bottom {
   transform: rotateX(-90deg) translateZ(150px);
-  background: radial-gradient(ellipse at center, #1f2937, #111827, #000000);
-  border: 5px solid #141414;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.8; }
+  50%      { opacity: 1; }
 }

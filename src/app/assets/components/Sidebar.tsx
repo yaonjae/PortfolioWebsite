@@ -20,12 +20,16 @@ const Sidebar = () => {
           stiffness: 380,
           damping: 30,
         }}
-        className="fixed w-fit lg:w-28 h-full p-6 flex justify-center items-center z-[999] pointer-events-none"
+        className="fixed w-fit lg:w-24 h-full p-6 flex justify-center items-center z-[999] pointer-events-none"
       >
         <div className="bg-white bg-opacity-5 w-full p-2 rounded-full">
-          <ul className="flex flex-col justify-center items-center my-4 gap-2 lg:gap-6">
+          <ul className="flex flex-col justify-center items-center py-2 space-y-2 lg:space-y-4 transition-all ease-in-out">
             {links.map((link, index) => (
-              <li key={index} className="relative scale-75 lg:scale-100">
+              <li key={index}
+                className={clsx(
+                  "relative transition-transform duration-200",
+                  active === link.text ? "scale-100 lg:scale-125" : "scale-75 lg:scale-100"
+                )}>
                 <Link
                   href={link.href}
                   onClick={() => setActive(link.text)}

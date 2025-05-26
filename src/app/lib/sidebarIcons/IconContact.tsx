@@ -2,7 +2,7 @@ import React from "react";
 
 const IconContact: React.FC = () => (
   <svg
-    className="h-8 w-8"
+    className="h-6 w-6"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"

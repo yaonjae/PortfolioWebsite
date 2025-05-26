@@ -49,6 +49,8 @@ export const links = [
   },
 ] as const;
 
+export const intro = "HTML for the frame, CSS for the flame, JavaScript’s the magic that gives it a name. Fueled by coffee, driven by code, I build cool sites that never explode."
+
 export const skillsData = [
   { name: "HTML", icon: html },
   { name: "CSS", icon: css },
