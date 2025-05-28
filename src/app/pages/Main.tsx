@@ -38,7 +38,7 @@ const Main = () => {
         id="Index"
         className="w-full h-screen flex justify-center items-center"
       >
-        <div className="w-3/4 h-full flex justify-center gap-2 lg:gap-0 flex-col lg:flex-row">
+        <div className="w-full max-w-screen-xl px-4 h-full flex justify-center gap-2 lg:gap-0 flex-col lg:flex-row">
           <motion.div
             initial={{ opacity: 0, scale: 0.3 }}
             animate={animateImage}

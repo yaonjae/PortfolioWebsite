@@ -90,3 +90,32 @@ h1 span {
   0%, 100% { opacity: 0.8; }
   50%      { opacity: 1; }
 }
+
+.slider {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 35%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  z-index: 2;
+}
+
+@keyframes autoRun {
+  from {
+    transform: translate(-50%, -50%) perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
+}
+
+.slider .item {
+  position: absolute;
+  inset: 0;
+  transform:
+    rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+    translateZ(450px);
+}

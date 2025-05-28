@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <>
       <div ref={ref} id="Contact" className="w-full h-screen my-10 flex justify-center items-center">
-        <div className="w-3/4 h-full flex flex-col-reverse lg:flex-row justify-center items-center gap-7">
+        <div className="w-full max-w-screen-xl px-4 h-full flex flex-col-reverse lg:flex-row justify-center items-center gap-7">
           <motion.div
             initial={{ opacity: 0, scale: 1 }}
             animate={animateMail}

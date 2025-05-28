@@ -8,26 +8,15 @@ import Image from "next/image";
 
 const Skills = () => {
   const { ref, inView } = usePageInView("Skills", 0.2);
-  const animateH1 = useAnimation();
-  const animateDetails = useAnimation();
-  const animateProficiency = useAnimation();
+  const animateContainer = useAnimation();
 
   useEffect(() => {
     if (inView) {
-      animateH1.start({ opacity: 1 });
-      animateDetails.start({ opacity: 1, y: 0 });
-      animateProficiency.start({ opacity: 1, x: 0 });
+      animateContainer.start({ scale: 1, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } });
     } else {
-      animateH1.start({ opacity: 0 });
-      animateDetails.start(() => ({
-        opacity: 0,
-        y: -50,
-        transition: {
-          duration: 0.3,
-        },
-      }));
+      animateContainer.start({ scale: 0, opacity: 0, transition: { duration: 0.3, ease: "easeIn" } });
     }
-  }, [inView, animateH1, animateDetails, animateProficiency]);
+  }, [inView, animateContainer]);
 
   return (
     <>
@@ -36,33 +25,28 @@ const Skills = () => {
         id="Skills"
         className="w-full h-screen flex justify-center items-center"
       >
-        <div className="w-3/4 h-full flex flex-col justify-center px-4 lg:px-0 mb-10 lg:mb-20">
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={animateH1}
-            className="text-center mb-10 text-3xl md:text-4xl lg:text-5xl font-bold"
-          >
-            <span>My Skills</span>
-          </motion.h1>
-          <div className="flex flex-wrap justify-center items-start gap-5 p-4 w-full overflow-y-auto">
+        <motion.div
+          className="w-full max-w-screen-xl px-4 h-full relative"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={animateContainer}
+        >
+          <div className="slider" style={{ ['--quantity' as any]: skillsData.length }}>
             {skillsData.map((skill, index) => (
-              <motion.div
-                initial={{ opacity: 0, y: -50 }}
-                animate={animateDetails}
-                transition={{
-                  delay: index * 0.1 + 0.1,
-                  type: "spring",
-                  bounce: 0.3,
-                }}
+              <div
                 key={skill.name}
-                className="flex flex-col w-40 h-40 justify-center items-center space-y-2 text-white bg-white rounded-md bg-opacity-5 drop-shadow-lg"
+                className="item flex flex-col text-white justify-center items-center bg-white bg-opacity-5 rounded-md hover:bg-cyan-900 transition-all"
+                style={{ ['--position' as any]: index + 1 }}
               >
-                <Image src={skill.icon} alt={skill.name} className="w-24 h-24" />
+                <Image
+                  src={skill.icon}
+                  alt={skill.name}
+                  className="w-14 h-20 object-contain"
+                />
                 <p>{skill.name}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

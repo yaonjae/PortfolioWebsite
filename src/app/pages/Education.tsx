@@ -48,7 +48,7 @@ const Education = () => {
 
   return (
     <div ref={ref} id="Education" className="w-full h-screen flex justify-center items-center my-5 lg:my-20">
-      <div className="w-3/4 h-full flex flex-col justify-center items-center gap-10">
+      <div className="w-full max-w-screen-xl px-4 h-full flex flex-col justify-center items-center gap-10">
         <motion.div
           className="w-full flex justify-between px-4"
           initial="hidden"

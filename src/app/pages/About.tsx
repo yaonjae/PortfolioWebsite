@@ -34,7 +34,7 @@ const About = () => {
 
   return (
     <div ref={ref} id="About" className="w-full h-screen flex justify-center items-center">
-      <div className="w-3/5 grid grid-cols-4 gap-4 text-white text-sm">
+      <div className="w-full max-w-screen-xl px-4 grid grid-cols-4 gap-4 text-white text-sm">
 
         <motion.div
           custom={0}
@@ -53,9 +53,9 @@ const About = () => {
           variants={fadeInVariant}
           initial="hidden"
           animate={animateDiv}
-          className="w-full h-72 p-6 bg-white bg-opacity-5 drop-shadow-md rounded-lg col-span-2 space-y-5">
+          className="w-full h-72 p-6 bg-white bg-opacity-5 drop-shadow-md rounded-lg col-span-2 space-y-0 xl:space-y-4 overflow-auto scroll-hidden">
           <h1 className="font-bold"><span>BIO :</span></h1>
-          <p className="text-justify indent-10 leading-6">{userDetails}</p>
+          <p className="text-justify indent-10 leading-2 xl:leading-6">{userDetails}</p>
         </motion.div>
 
         <motion.div
